@@ -13,7 +13,7 @@ you  can do the following task with this converter
 
 ## running
 ***
-you can simply run the program by opening terminal in the folder and run `python start.py`
+- you can simply run the program by opening terminal in the folder and run `python start.py`
 ---
 
 ## usage notes
