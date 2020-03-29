@@ -4,7 +4,7 @@ os.system("resize -s 24 100 ")
 def clearterm():
     os.system("clear")
 
-clearterm();
+clearterm()
 print('''
                                 _
                                | |
@@ -23,7 +23,7 @@ print('''
   ''')
 os.system("g++ -Wall -c 'master.cpp' ")#compile
 os.system("g++ -Wall -o 'master' 'master.cpp' ")#build
-clearterm();
+clearterm()
 print('''                           _
                                                _
                                               | |
@@ -42,4 +42,4 @@ print('''                           _
 
   ''')
 os.system("./master")#run
-clearterm();
+clearterm()
