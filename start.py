@@ -1,10 +1,10 @@
 import os
 import time
 os.system("resize -s 24 100 ")
-def clear():
+def clearterm():
     os.system("clear")
 
-clear();
+clearterm();
 print('''
                                 _
                                | |
@@ -23,7 +23,7 @@ print('''
   ''')
 os.system("g++ -Wall -c 'master.cpp' ")#compile
 os.system("g++ -Wall -o 'master' 'master.cpp' ")#build
-clear();
+clearterm();
 print('''                           _
                                                _
                                               | |
@@ -42,4 +42,4 @@ print('''                           _
 
   ''')
 os.system("./master")#run
-clear();
+clearterm();
