@@ -23,4 +23,4 @@ the program will behaves abnormally when processing bigger numbers
 ---
 
 ### consider contributing to the repo
-### if you found any bugs inbox me or dm me on ig/ ```_n.r.s_```
+- if you found any bugs inbox me or dm me on ig/ ```_n.r.s_```
