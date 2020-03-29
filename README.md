@@ -17,6 +17,8 @@ you can simply run the program by opening terminal in the folder and run `python
 
 ## usage notes
 
-the program behaves abnormally when processing bigger numbers 
+the program will behaves abnormally when processing bigger numbers 
 
 ---
+
+### consider contributing to the repo
