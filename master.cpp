@@ -13,11 +13,18 @@ int * getOCT(int bits);
 int * getHEX(int bits);
 int toDECIMAL(int type);
 int fromDECIMAL(int initialNUM , int type);
+void ENTER2exit(int type);
+void clearterm(){
+    system("clear");
+}
+
+
 //***************************GLOBAL VARIABLES***********************************
 int bits,i,num;
 //*******************************main()*****************************************
 int main(){
     int opt;
+    clearterm();
     cout<<"\t\t\t ***************** MENU *****************";
     cout<<"\n\t\t\t\t [1].CONVERT from BINARY ";
     cout<<"\n\t\t\t\t [2].CONVERT from DECIMAL ";
@@ -37,15 +44,19 @@ int main(){
                 break;
         case 4 :HEXADECIMALmain();
                 break;
-        case 0 :exit(0);
+        case 0 :clearterm();
+                exit(0);
                 break;
         default:cout<<"invalid option ! choose again";
                 main();
     }
+    ENTER2exit(0);
 }
+
 //****************************BINARY MENU***************************************
 void BINARYmain(){
     int opt;
+    clearterm();
     cout<<"\t\t\t *************BINARY OPERATIONS MENU *****************";
     cout<<"\n\t\t\t\t [1].CONVERT BINARY to DECIMAL ";
     cout<<"\n\t\t\t\t [2].CONVERT BINARY to OCTAL ";
@@ -70,12 +81,13 @@ void BINARYmain(){
         default:cout<<"invalid option ! try again ";
                 BINARYmain();
     }
-    BINARYmain();
+    ENTER2exit(2);
 }
 
 //***********************DECIMAL MENU*******************************************
 void DECIMALmain(){
     int opt;
+    clearterm();
     cout<<"\t\t\t *************DECIMAL OPERATIONS MENU *****************";
     cout<<"\n\t\t\t\t [1].CONVERT DECIMAL to BINARY ";
     cout<<"\n\t\t\t\t [2].CONVERT DECIMAL to OCTAL ";
@@ -99,12 +111,13 @@ void DECIMALmain(){
         default:cout<<"invalid option ! try again ";
                 DECIMALmain();
     }
-    DECIMALmain();
+    ENTER2exit(10);
 }
 
 //************************OCTAL MENU *******************************************
 void OCTALmain(){
     int opt;
+    clearterm();
     cout<<"\t\t\t *************OCTAL OPERATIONS MENU *****************";
     cout<<"\n\t\t\t\t [1].CONVERT OCTAL to BINARY ";
     cout<<"\n\t\t\t\t [2].CONVERT OCTAL to DECIMAL ";
@@ -128,12 +141,13 @@ void OCTALmain(){
         default:cout<<"invalid option ! try again ";
                 OCTALmain();
     }
-    OCTALmain();
+    ENTER2exit(8);
 }
 
 //**************************HEXADECIMAL MENU************************************
 void HEXADECIMALmain(){
     int opt;
+    clearterm();
     cout<<"\t\t\t *************HEXADECIMAL OPERATIONS MENU *****************";
     cout<<"\n\t\t\t\t [1].CONVERT HEXADECIMAL to BINARY ";
     cout<<"\n\t\t\t\t [2].CONVERT HEXADECIMAL to DECIMAL ";
@@ -157,7 +171,7 @@ void HEXADECIMALmain(){
         default:cout<<"invalid option ! try again ";
                 HEXADECIMALmain();
     }
-    HEXADECIMALmain();
+    ENTER2exit(16);
 }
 
 //*******************************BINARY INPUT***********************************
@@ -333,4 +347,26 @@ int fromDECIMAL(int initialNUM , int type){
         }
     }
     cout<<"\n\n";
+}
+
+//**************************** ENTER 2 EXIT ************************************
+void ENTER2exit(int type){
+    char varEXIT;
+    cout<<"Press ENTER to exit ";
+    cin.get();
+    if (cin.get() == '\n'){
+        clearterm();
+        switch(type){
+            case 0 : main();
+                     break;
+            case 2 : BINARYmain();
+                     break;
+            case 8 : OCTALmain();
+                     break;
+            case 10: DECIMALmain ();
+                     break;
+            case 16: HEXADECIMALmain();
+                     break;
+        }
+    }
 }
